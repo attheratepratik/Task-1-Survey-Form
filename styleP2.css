@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading{
+    background-color: rgb(250, 235, 215);
+    border: 3px solid purple;
+}
+
+
+/* Contact Section*/
+#contact {
+    position: relative;
+    padding-bottom: 34px;
+}
+
+
+.h-primary-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+h2{
+    color: green;
+    display: flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url("bg-surveyForm.jpg") no-repeat center center/cover;
+}
+
+#Contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+
+#Contact-box form {
+    width: 60%;
+}
+
+#Contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+#contact input,
+#contact textarea {
+    padding: 0.3rem;
+    width: 100%;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+.form-group1{
+    display: flex;
+    justify-content: left;
+
+}
+
+select{
+    width: 20vw;
+}
+
+
+
+button{
+    font-size: 1.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: rgb(199, 164, 231);
+
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* section for CSS in JS form validation */
+
+.nameError{
+    color: red;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleP2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="heading">
+            <h1 class="h-primary-center">Student Information Form (by SPPU)</h1>
+        </div>
+    </nav>
+    <section id="contact">
+        <div id="Contact-box">
+            <form action="D:\projects_web developement\cascode internship\validation\indexP2.html" name="myform" onsubmit="return validateForm()" method="post">
+                <h2>Student Details</h2>
+                <div class="form-group">
+                    <label for="name">First Name:
+                    <input type="text" class="name" id="name" placeholder="enter your first name"><br> 
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Middle Name:
+                    <input type="text" class="name" id="name" placeholder="enter your Middle name">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Last Name:
+                    <input type="text" class="name" id="name" placeholder="enter your name">
+                    </label>
+                </div>
+                <br>
+                <div class="form-group1">
+                    <br>
+                    <label id="label" for="radio">GENDER:</label>                    
+                        <input type="radio" name="gender" id="male"><label>male</label>
+                        <br>
+                        <input type="radio" name="gender" id="female"><label>female</label>
+                        <br>
+                    </label>
+                    <br>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="email">Email:
+                    <input type="email" class="email" id="email" placeholder="enter your email">
+
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone Number:
+                    <input type="phone" class="Phone" id="Phone" placeholder="enter your phone number">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Rnum">PRN Number:
+                    <input type="Rnum" class="Rnum" id="Rnum" placeholder="enter your Registration number">
+                    </label>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="qulification">Select your qulification::
+                <select name="name" id="Matriculation">
+                    <optgroup label="Matriculation">Matriculation</optgroup>
+                        <option value="10th">10th</option>
+                        <option value="12th">10th</option>
+                    <optgroup label="INTERMEDIATE">intermediate</optgroup>
+                        <option value="BE">B.E</option>
+                        <option value="BSc">B.Sc</option>
+                        <option value="BA">B.A</option>
+                    <optgroup label="MASTERS">masters</optgroup>
+                        <option value="MA"> M.A</option>
+                        <option value="MSc"> M.Sc</option>
+                        <option value="ME"> M.E</option>
+                    <optgroup></optgroup>
+                </select>
+                </div>               
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h2>Parent details</h2>
+                <div class="form-group">
+                <label for="name">First Name:
+                    <input type="text" class="name" id="name" placeholder="enter your first name">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Middle Name:
+                    <input type="text" class="name" id="name" placeholder="enter your Middle name">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Last Name:
+                    <input type="text" class="name" id="name" placeholder="enter your name">
+                    </label>
+                    
+                </div>
+                <br>
+                <div class="form-group1">
+                    <label id="label" for="radio">GENDER:</label>                    
+                        <input type="radio" name="gender" id="male"><label>male</label>
+                        
+                        <input type="radio" name="gender" id="female"><label>female</label>
+                        
+                    </label>
+                </div>
+
+
+
+                <div class="form-group">
+                    <br>
+                    <label for="email">Email:
+                    <input type="email" class="email" id="email" placeholder="enter your email">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone Number:
+                    <input type="phone" class="Phone" id="Phone" placeholder="enter your phone number">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">feedback (about SPPU) :</label>
+                    <textarea name="message" id="message" cols="email" rows="10" placeholder="type in brief"></textarea>                    
+                </div>
+
+                <div id="submit-by-id">
+                    <div id="submit">
+
+                        <button type="submit"><a href="D:\project
+                            s_web developement\cascode internship\validation\indexP2.html" target="_blank">Submit</a></button>
+                        <br>
+
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+
+    <script src="script.js">
+
+        function setMyError(id, error){
+
+            //set error inside tag of id
+            element = document.getElementById(id);
+            element.getElementByClassName('formerror')[0].innerHTML = error; 
+        }
+
+        function validateForm(){
+            var returnval = true;
+
+            // perform validation and if validation fails, set the value of returnval to false
+            var name = document.forms['myForm']["fname"].value;
+            if(name.length<5){
+                setMyError("name", "length of name is too short");
+                returnval = false;
+            }
+            console.log(name);
+            return false;
+        }
+    </script>
+
+</body>
+</html>
